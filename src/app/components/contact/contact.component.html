@@ -1,0 +1,364 @@
+<section class="contact text-light mt-4" id="contactus-section">
+
+    <div class="container-fluid pl-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contactus-header my-3 pt-3 pb-4 pl-3">
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="contactus-content">
+                    <p>You can let your mail OR phone number and your name and we will contact you</p>
+                </div>
+                <div class="d-flex justify-content-start ">
+                    <form [formGroup]="clientMessage" class="form-group w-100 ">
+                            <input type="text" name="clientName" class="form-control my-2 contact-input px-2 " id="" placeholder="Full Name"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Full Name'"
+                            formControlName="clientName"
+                            >
+                            <input type="text" name="clientPhone" class="form-control my-2 contact-input px-2" id="" placeholder="Phone Number"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Phone Number'" formControlName="clientPhone">
+                            <input type="email" name="clientMail" class="form-control my-2 contact-input px-2" id="" placeholder="email"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Email'" formControlName="clientMail">
+                            <textarea name="clientMessage" class="form-control my-2 contact-input px-2" id="" cols="30" rows="5"
+                             placeholder="type your message"
+                             onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'message'" formControlName="clientMessage"></textarea>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit"  (click)="sendMessage()" class="contactUs-button  px-3 py-1">
+                                   Send Data 
+                                </button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3 text-dark px-5  pt-5 mt-4">
+
+                <div class="row contact-Methods-container mt-2" *ngFor='let x of contactMethods , index as i'>
+                    <div class="col-md-12 my-2 px-5 py-2" >
+                        <div class=" d-flex justify-content-center my-2 pt-2" *ngIf= "_Router.url ==='/admindashboard'">
+                            <button class=" edit-project-button p-1"data-toggle="modal" data-target="#editContact" (click)="idHolder(x)"> <i class="fas fa-edit"></i> edit</button>
+                        </div>
+                        <div class="">
+                            <h3> <i class="fas fa-mobile-alt fa-lg "></i> Mobile</h3>
+                        </div>
+                        <div class="">
+                            <p>{{x.contactMobile}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12  my-2 px-5  py-2 ">
+                        <div class="">
+                            <h3><i class="fas fa-mobile-alt fa-lg "></i> Phone</h3>
+                        </div>
+                        <div class=" ">
+                            <p class="">{{x.contactPhone}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12  my-2 px-5  py-2 ">
+                        <div class="">
+                            <h3> <i class="fas fa-paper-plane fa-lg "></i> Mail</h3>
+                        </div>
+                        <div class=" ">
+                            <p class="">{{x.contactMail}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12  my-2 px-5 py-2">
+                        <div class="">
+                            <h3> <i class="fas fa-fax fa-lg "></i> Fax</h3>
+                        </div>
+                        <div class="">
+                            <p>{{x.contactFax}}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-5 mt-5">
+                <div class="row mt-3 d-flex justify-content-center text-light mb-3 py-3 locations">
+                    <div class="col-md-12  rounded location ">
+                        <h3 class="">   <img src="../../../assets/images/203024.png" class="location-image my-2" alt=""> EGYPT                        
+                        <small class="text-lighter">(Main Branch)</small>
+                        </h3>                    
+                    <div class="row">
+                           <div class="col-md-6  px-2">
+                               <p>
+                               66 Abo Hayyan El-Tawheedy St. Nasr City, Cairo, Egypt
+                               </p>
+                           </div>
+                           <div class="col-md-6 d-flex justify-content-center pl-5">
+                                <div class=" d-flex justify-content-end pr-4 w-100">
+                                    <button class="mainlocation-copybutton px-1 py-1 my-2" (click)="myFunction()">Copy Location</button>
+                                </div>
+                           </div>
+                               
+                           <div class="row test-location">
+
+                            
+                                <div class="col-md-12">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.6889469609746!2d31.33441651472783!3d30.074449381871435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e16a986766f%3A0x503c57a02d2f1c1d!2zNjYsINi52YXYp9ix2KfYqiDYsdin2KjYudipINin2YTYp9iz2KrYq9mF2KfYsdmJ2IwgQWwgR29sZiwgTmFzciBDaXR5LCBDYWlybyBHb3Zlcm5vcmF0ZQ!5e0!3m2!1sen!2seg!4v1640098935520!5m2!1sen!2seg" 
+                                    class="main-location" height="" loading="lazy"></iframe>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                    <!--<div class="col-md-12  rounded location ">
+                            <h3 class="">   <img src="../../../assets/images/203024.png" class="location-image my-2" alt=""> EGYPT                        
+                            </h3>                    
+                        <div class="row">
+                               <div class="col-md-6  px-2">
+                                   <p>
+                                   66 Abo Hayyan El-Tawheedy St. Nasr City, Cairo, Egypt
+                                   </p>
+                               </div>
+                               <div class="col-md-6  px-2">
+                                    <div class="d-flex justify-content-center w-50">
+                                        <button class="location-copybutton  px-1 py-1 my-2" (click)="myFunction()">copy Location</button>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row test-location">
+                            <div class="col-md-12">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.6889469609746!2d31.33441651472783!3d30.074449381871435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e16a986766f%3A0x503c57a02d2f1c1d!2zNjYsINi52YXYp9ix2KfYqiDYsdin2KjYudipINin2YTYp9iz2KrYq9mF2KfYsdmJ2IwgQWwgR29sZiwgTmFzciBDaXR5LCBDYWlybyBHb3Zlcm5vcmF0ZQ!5e0!3m2!1sen!2seg!4v1640098935520!5m2!1sen!2seg" 
+                                class="location-frame" height="" loading="lazy"></iframe>
+                                
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--<div class="col-md-12  rounded location ">
+                        <h3 class="">   <img src="../../../assets/images/203024.png" class="location-image my-2" alt=""> EGYPT                        
+                        </h3>                    
+                    <div class="row">
+                           <div class="col-md-6  px-2">
+                               <p>
+                               66 Abo Hayyan El-Tawheedy St. Nasr City, Cairo, Egypt
+                               </p>
+                           </div>
+                           <div class="col-md-6  px-2">
+                                <div class="d-flex justify-content-center w-50">
+                                    <button class="location-copybutton  px-1 py-1 my-2" (click)="myFunction()">copy Location</button>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row test-location">
+                        <div class="col-md-12">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.6889469609746!2d31.33441651472783!3d30.074449381871435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e16a986766f%3A0x503c57a02d2f1c1d!2zNjYsINi52YXYp9ix2KfYqiDYsdin2KjYudipINin2YTYp9iz2KrYq9mF2KfYsdmJ2IwgQWwgR29sZiwgTmFzciBDaXR5LCBDYWlybyBHb3Zlcm5vcmF0ZQ!5e0!3m2!1sen!2seg!4v1640098935520!5m2!1sen!2seg" 
+                            class="location-frame" height="" loading="lazy"></iframe>
+                            
+                        </div>
+                    </div>
+                   
+                </div>-->
+                   <!--<div class="col-md-12  rounded location ">
+                        <h3 class="">   <img src="../../../assets/images/203024.png" class="location-image my-2" alt=""> EGYPT</h3>
+                        <div class="row">
+                               <div class="col-md-6  px-2">
+                                   <p>
+                                   66 Abo Hayyan El-Tawheedy St. Nasr City, Cairo, Egypt
+                                   </p>
+                               </div>
+                               <div class="col-md-6  px-2">
+                                    <div class="d-flex justify-content-center w-50">
+                                        <button class="location-copybutton  px-1 py-1 my-2" (click)="myFunction()"> copy Location</button>
+                                    </div>
+                                </div>
+    
+                        </div>
+                        <div class="row test-location">
+                            <div class="col-md-12">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.6889469609746!2d31.33441651472783!3d30.074449381871435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e16a986766f%3A0x503c57a02d2f1c1d!2zNjYsINi52YXYp9ix2KfYqiDYsdin2KjYudipINin2YTYp9iz2KrYq9mF2KfYsdmJ2IwgQWwgR29sZiwgTmFzciBDaXR5LCBDYWlybyBHb3Zlcm5vcmF0ZQ!5e0!3m2!1sen!2seg!4v1640098935520!5m2!1sen!2seg" 
+                                class="location-frame" height="" loading="lazy"></iframe>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>-->
+
+        
+            </div>
+        </div>
+        </div>
+        <!--locations-->
+        <div class="row mt-3 d-flex justify-content-center text-light mb-3 py-3 locations">
+                <div class="col-md-4  rounded location ">
+                    <h3 class="">   <img src="../../../assets/images/england-pngrepo-com (2).png" class="location-image my-2" alt=""> ENGLAND</h3>
+                    <div class="row">
+                           <div class="col-md-6  px-2">
+                               <p>
+                                    391 Walwoth Road London , SE17 2AW
+                               </p>
+                           </div>
+                           <div class="col-md-6  pl-5">
+                                <div class="d-flex justify-content-center w-100">
+                                    <button class="location-copybutton  px-1 py-1 my-2" (click)="myFunction()"> copy Location</button>
+                                </div>
+                            </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5319016684266!2d-0.0957856843438323!3d51.48510597963145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876036299232965%3A0xe131dc599f28e213!2s391%20Walworth%20Rd%2C%20London%20SE17%202AW%2C%20UK!5e0!3m2!1sen!2seg!4v1645709474216!5m2!1sen!2seg" 
+                            class="location-frame" height="" loading="lazy"></iframe>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  rounded location ">
+                    <h3 class="">   <img src="../../../assets/images/somalia.png" class="location-image my-2" alt=""> SOMALIA                        
+                    </h3>                    
+                <div class="row">
+                       <div class="col-md-6  px-2">
+                           <p>
+                                Marine St -AbdElAziz District , Mogadishu
+                           </p>
+                       </div>
+                       <div class="col-md-6 pl-5">
+                            <div class="d-flex justify-content-center w-100  ">
+                                <button class="location-copybutton  px-1 py-1 my-2" (click)="myFunction()"> copy Location</button>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.2887901896056!2d45.36076691457359!3d2.040346598512589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d5843723e261f23%3A0xc14f1130bd150427!2sLido%20beach!5e0!3m2!1sen!2seg!4v1645709856524!5m2!1sen!2seg" 
+                        class="location-frame" height="" loading="lazy"></iframe>
+                        
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-4  rounded location ">
+                    <h3 class="">   <img src="../../../assets/images/203024.png" class="location-image my-2" alt=""> KENYA                        
+                    </h3>                    
+                <div class="row">
+                       <div class="col-md-6  px-2">
+                           <p>
+                           66 Abo Hayyan El-Tawheedy St. Nasr City, Cairo, Egypt
+                           </p>
+                       </div>
+                       <div class="col-md-6  pl-5">
+                            <div class="d-flex justify-content-center w-100">
+                                <button class="location-copybutton  px-1 py-1 my-2" (click)="myFunction()"> copy Location</button>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.6889469609746!2d31.33441651472783!3d30.074449381871435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e16a986766f%3A0x503c57a02d2f1c1d!2zNjYsINi52YXYp9ix2KfYqiDYsdin2KjYudipINin2YTYp9iz2KrYq9mF2KfYsdmJ2IwgQWwgR29sZiwgTmFzciBDaXR5LCBDYWlybyBHb3Zlcm5vcmF0ZQ!5e0!3m2!1sen!2seg!4v1640098935520!5m2!1sen!2seg" 
+                        class="location-frame" height="" loading="lazy"></iframe>
+                        
+                    </div>
+                </div>
+            </div>
+                  
+                
+            
+        </div>
+            <!--EDIT Contact-->
+            <div class="modal fade " id="editContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered m-auto modal-xl  " role="document">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header servicesModal-head border-0">
+                      <h5 class="modal-title  my-1 pt-3 pb-3 pl-3 ml-3" id="exampleModalLabel">Update Service</h5>
+                      <button type="button" class="close text-warning mr-2 " data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    
+                    <div class="modal-body form-group ">
+                        <form [formGroup]="updateContact">
+                            <div class="d-flex justify-content-center py-2">
+                                <input type="text"  name="contactPhone" id="" cols="30" rows="5" formControlName="contactPhone" placeholder="Phone "class="form-control w-50">
+                            </div>
+                            <div class="d-flex justify-content-center py-2">
+                                <input type="Mail" name="contactMail" id="" cols="30" rows="5" formControlName="contactMail" placeholder="Mail "class="form-control w-50">
+                            </div>
+                            <div class="d-flex justify-content-center py-2">
+                                <input type="text" name="contactFax" id="" cols="30" rows="5" formControlName="contactFax" placeholder="Fax "class="form-control w-50">
+                            </div>
+                            <div class="d-flex justify-content-center py-2">
+                                <input type="text" name="contactMobile" id="" cols="30" rows="5" formControlName="contactMobile" placeholder="Mobile"class="form-control w-50">
+                            </div>
+                            
+                        </form>
+
+                    </div>
+
+                    <div class="modal-footer my-2 border-0 pr-3">
+                      <button  class=" p-1 cancel-button" data-dismiss="modal">cancel</button>
+                      <button  class=" p-1 confirmUpdate-button" data-dismiss="modal" (click)="updateContactMethods(contactIdHolder.contactId)">Confirm</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="Messages " *ngIf= "_Router.url ==='/admindashboard'">
+                <div class="row">
+                    <div class="col-md-12 messages-header text-center pb-3">
+                        <div class="d-flex justify-content-center">
+                            <h1>
+                                Client Messages
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-end pr-3">
+                            <button class="delete-project-button btn p-2"  data-target="#deleteAllMessages" data-toggle="modal" > 
+                                DELETE Messages</button>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-md-3 message-item my-2 py-3" *ngFor="let x of clientMessages ; index as i">
+                            <div class="d-flex justify-content-center">
+                                <h3>{{x.clientName}}</h3>
+                            </div>
+                            <div class=" pl-2">
+                                <p> <span> Phone :</span>  {{x.clientPhone}}</p>
+                                <p> <span> Mail :</span>  {{x.clientMail}}</p>
+                                <p> <span> Message :</span>  {{x.clientMessage}}</p>
+                            </div>
+                            <div class="2 d-flex justify-content-end pr-3">
+                                <button class="delete-project-button btn p-1" (click)="idHolder(x.clientId)"  data-target="#deleteMessage" data-toggle="modal" > 
+                                    DELETE </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--delete AllMessages-->
+        <div class="modal fade " id="deleteAllMessages" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered m-auto   " role="document">
+              <div class="modal-content bg-dark">
+                <div class="modal-header servicesModal-head border-0">
+                  <h5 class="modal-title  my-1 pt-3 pb-3 pl-3 ml-3" id="exampleModalLabel">Deletion can't be undone ?</h5>
+                  <button type="button" class="close text-warning mr-2 " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-footer my-2 border-0 pr-3">
+                  <button  class=" p-1 cancel-button" data-dismiss="modal">cancel</button>
+                  <button  class=" p-1 confirmDeletion-button" data-dismiss="modal"  (click)=deleteAllMessages()>Confirm</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--deleteClientMessage-->
+        <div class="modal fade " id="deleteMessage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered m-auto   " role="document">
+              <div class="modal-content bg-dark">
+                <div class="modal-header servicesModal-head border-0">
+                  <h5 class="modal-title  my-1 pt-3 pb-3 pl-3 ml-3" id="exampleModalLabel">Deletion can't be undone ?</h5>
+                  <button type="button" class="close text-warning mr-2 " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-footer my-2 border-0 pr-3">
+                  <button  class=" p-1 cancel-button" data-dismiss="modal">cancel</button>
+                  <button  class=" p-1 confirmDeletion-button" data-dismiss="modal"  (click)=deleteClientMessage(contactIdHolder)>Confirm</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>

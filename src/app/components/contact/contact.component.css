@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact
+{
+    min-height: 100vh;
+}
+.contact-Methods-container
+{
+   color: white;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+.contact-Methods-container h3
+{
+    color: #d1ae45;
+}
+
+.contactus-header , .findus-header{
+
+   border-left: #d1ae45 10px solid;
+   
+}
+.contactus-header h1 {
+    color: #d1ae45;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*border-bottom: #d1ae45 2px solid;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;*/
+    
+}
+.contactus-content p
+{
+    color: white;
+}
+.contact-input
+{
+    background-color: #d1ae45;
+    caret-color: #d1ae45;
+    color: #997a1d;
+    transition-property: background-color box-shadow;
+    transition-duration: .5s;
+    resize: none;
+    
+}
+.contact-input:focus{
+    background-color: white;
+    box-shadow:0 0 3px 3px #d1ae45 !important;
+    
+}
+.messages-header h1
+{
+    color: hsl(45, 60%, 55%);
+    font-weight: bolder;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    border-bottom: #d1ae45 2px solid;
+    border-spacing: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.message-item{
+    background-color: black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.message-item h3{
+    color: #d1ae45;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.message-item p{
+
+}
+.message-item p span
+{
+    color: #d1ae45;
+}
+.contactUs-button 
+{
+    background-color: #d1ae45;
+    color: black;
+    border: solid 2px rgb(53, 52, 52);
+    border-radius: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition-property: background-color color border;
+    transition-duration: .5s;
+}
+.mainlocation-copybutton
+{
+    background-color: #d1ae45;
+    color: black;
+    font-size: 15px;
+    border: solid 2px rgb(53, 52, 52);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition-property: background-color color border;
+    transition-duration: .5s;
+}
+.location-copybutton
+{
+    background-color: #d1ae45;
+    color: black;
+    font-size: 11px;
+    border: solid 2px rgb(53, 52, 52);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition-property: background-color color border;
+    transition-duration: .5s;
+}
+.contactUs-button:hover , .location-copybutton:hover
+{
+    background-color: black;
+    color: #d1ae45;
+    border: 2px solid #d1ae45;
+}
+.contactUs-button a
+{
+    color: black;
+    transition-property: color;
+    transition-duration: .5s;
+}
+.contactUs-button:hover  a
+{
+    color: #d1ae45;
+}
+
+.location{
+    cursor: pointer;
+}
+.location-image
+{
+    width: 10%;
+}
+.main-location
+{
+    filter: brightness(50%);
+    width: 96%;
+    height: 230px;
+    transition-property:  filter ;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+    -webkit-filter: brightness(50%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.contact hr
+{
+    color: transparent;
+    border: transparent solid 4px;
+}
+.locations h3{
+
+    color: rgb(136, 133, 133);
+}
+.location h3 small{
+    font-weight: bold;
+    font-size: 15px;
+}
+.locations p{
+}
+.location-frame{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    filter: brightness(50%);
+    width: 88%;
+    height: 145px;
+    transition-property:  filter ;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+    -webkit-filter: brightness(50%);
+    
+}
+.location:hover .location-frame , .location:hover .main-location
+{
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+
+/*.test-location
+{
+   
+    display: none;
+    transition-property: display width;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}*/
+.location:hover .test-location 
+{
+    display: inline-block;
+    width: 100%;
+}
+.locations hr
+{
+    color: #d1ae45;
+    border: solid #d1ae45 1px;
+}
