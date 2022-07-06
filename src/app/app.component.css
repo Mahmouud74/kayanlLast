@@ -1,0 +1,19 @@
+*{
+    scroll-behavior: smooth;
+}
+.admin-add-button{
+    background-color: #d1ae45;
+    color: #212529;
+    border: 1px solid #d1ae45;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+.admin-add-button:hover{
+    background-color: black;
+    color: #d1ae45;
+    border: 1px solid #d1ae45;
+
+}
