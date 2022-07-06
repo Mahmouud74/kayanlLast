@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+}
+
+.kayan-navbar {
+    background-color: rgba(0,0,0,.6);
+    color:white;
+    font-family: Georgia ,serif;
+    font-weight: lighter;
+    font-size: 16px;
+    font-weight: bolder;
+
+}
+.kayan-navbar a {
+    color: rgb(212, 175, 55);
+    
+}
+.kayan-navbar-brand{
+    padding-left: 3em;
+
+}
+
+.item{
+    transition-property:  color border-bottom border-radius ;
+}
+.itemII{
+    transition-property:  color border-bottom border-radius ;
+}
+.itemII:hover{
+    border-bottom: solid #212529;
+}
+.item:hover{
+    color: #D4AF37;
+    border-bottom: solid rgb(212, 175, 55);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.active-item {
+    border-bottom: solid rgb(212, 175, 55) ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.active-itemtII
+{
+    border-bottom: solid #212529 ;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.navbar-toggler
+{
+    color: transparent;
+}
+.navbar-toggler-icon{
+    color: #D4AF37;
+}
