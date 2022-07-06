@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    scroll-behavior: smooth;
+}
+.admin-add-button{
+    background-color: #d1ae45;
+    color: #212529;
+    border: 1px solid #d1ae45;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+.admin-add-button:hover{
+    background-color: black;
+    color: #d1ae45;
+    border: 1px solid #d1ae45;
+
+}
+.delete-project-button
+{    
+    background-color: black;
+    color: #d1ae45;
+    border: 1px solid #d1ae45;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    font-weight: lighter;
+}
+.delete-project-button:hover{
+    color: #d1ae45;
+    background-color: red;
+    border: 1px solid #d1ae45;
+}
+.edit-project-button{
+    background-color: black;
+    color: #d1ae45;
+    border: 1px solid #d1ae45;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    font-weight: lighter;
+}
+.edit-project-button:hover{
+    color: #d1ae45;
+    background-color: #167af5;
+    border: 1px solid #d1ae45;
+}
+.cancel-button
+{
+    background-color: #d1ae45;
+    border: 1px solid white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    font-weight: lighter;
+    -webkit-border-radius: 10;
+}
+.cancel-button:hover
+{
+    background-color: white;
+    border: 1px solid black;
+}
+.confirmDeletion-button
+{
+    color: #d1ae45;
+    background-color: rgb(184, 39, 39);
+    border: 1px solid white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    font-weight: bolder;
+    -webkit-border-radius: 10;
+}
+.confirmUpdate-button
+{
+    
+    color: #d1ae45;
+    background-color: #167af5;
+    border: 1px solid white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    font-weight: bolder;
+    -webkit-border-radius: 10;
+}
+.confirmAdd-button{
+    color: #d1ae45;
+    background-color: #198019    ;
+    border: 1px solid white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    font-weight: bolder;
+    -webkit-border-radius: 10;
+}
+
+.servicesModal-head
+{
+    color: #d1ae45;
+}
